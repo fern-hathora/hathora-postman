@@ -1,10 +1,10 @@
-# {Company} {Api Name} Postman Collection
+# Hathora Postman Collection
 
-This repository contains a [Postman Collection](/collection.json) for <{docs_url}>.
+This repository contains a [Postman Collection](/collection.json) for the [Hathora API](https://fern-api.stoplight.io/docs/hathora).
 
 ## How can I use the Postman Collection?
 
-[Join our Postman Workspace](https://www.postman.com/fern-api/workspace/fern-{company}). When the API is updated, the Workspace will auto-update.
+[Join our Postman Workspace](https://www.postman.com/fern-api/workspace/fern-postman). When the API is updated, the Workspace will auto-update.
 
 ## What is a Postman Collection?
 
@@ -12,4 +12,4 @@ This repository contains a [Postman Collection](/collection.json) for <{docs_url
 
 ## Issues
 
-Feel free to [leave an issue](https://github.com/fern-{company}/{company}-postman/issues) on this repo.
+Feel free to [leave an issue](https://github.com/fern-hathora/hathora-postman/issues) on this repo.
