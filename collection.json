@@ -1,0 +1,255 @@
+{
+  "info": {
+    "name": "Hathora Cloud API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://cloud.hathora.dev/v1/",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ],
+    "type": "bearer"
+  },
+  "item": [
+    {
+      "name": "App",
+      "item": [
+        {
+          "name": "Get app response",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/app/{appName}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app",
+                "{appName}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "appName",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Get app logs",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/app/{appName}/logs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app",
+                "{appName}",
+                "logs"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "appName",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete app",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/app/{appName}/delete?forceDestroy=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app",
+                "{appName}",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "forceDestroy",
+                  "value": ""
+                }
+              ],
+              "variable": [
+                {
+                  "key": "appName",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Room",
+      "item": [
+        {
+          "name": "Create room",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/rooms/create/:appId?region=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rooms",
+                "create",
+                ":appId"
+              ],
+              "query": [
+                {
+                  "key": "region",
+                  "value": ""
+                }
+              ],
+              "variable": [
+                {
+                  "key": "appId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Connect room",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/rooms/connect/:appId/:roomId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rooms",
+                "connect",
+                ":appId",
+                ":roomId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "appId",
+                  "value": ""
+                },
+                {
+                  "key": "roomId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Suspend room",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/rooms/suspense/:appId/:roomId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rooms",
+                "suspense",
+                ":appId",
+                ":roomId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "appId",
+                  "value": ""
+                },
+                {
+                  "key": "roomId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete room",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/rooms/destory/:appId/:roomId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rooms",
+                "destory",
+                ":appId",
+                ":roomId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "appId",
+                  "value": ""
+                },
+                {
+                  "key": "roomId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
