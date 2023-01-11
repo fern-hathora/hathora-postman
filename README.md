@@ -2,9 +2,7 @@
 
 This repository contains a [Postman Collection](/collection.json) for the [Hathora API](https://fern-api.stoplight.io/docs/hathora).
 
-## How can I use the Postman Collection?
-
-[Join our Postman Workspace](https://www.postman.com/fern-api/workspace/fern-postman). When the API is updated, the Workspace will auto-update.
+[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/fern-hathora)
 
 ## What is a Postman Collection?
 
