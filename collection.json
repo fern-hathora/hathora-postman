@@ -30,7 +30,7 @@
       "name": "App",
       "item": [
         {
-          "name": "Get app response",
+          "name": "Get App",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/app/{appName}",
@@ -45,18 +45,47 @@
               "variable": [
                 {
                   "key": "appName",
-                  "value": ""
+                  "value": "your-app-name"
                 }
               ]
             },
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/app/{appName}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "app",
+                    "{appName}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "appName",
+                      "value": "your-app-name"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"appId\": \"your-app-id\",\n    \"deploymentId\": \"your-deployment-id\",\n    \"regionalContainerTags\": [],\n    \"containerPort\": 100,\n    \"transportType\": \"tcp\",\n    \"roomsPerProcess\": 10,\n    \"requestedCPU\": 32,\n    \"requestedMemoryMB\": 4096,\n    \"deployedBy\": \"username\",\n    \"deployStartedAt\": \"2023-01-11T23:14:02+00:00\",\n    \"deployFinishedAt\": \"2023-01-11T23:14:42+00:00\",\n    \"status\": \"completed\",\n    \"secret\": \"app-secret\"\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
-          "name": "Get app logs",
+          "name": "Get App logs",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/app/{appName}/logs",
@@ -72,21 +101,51 @@
               "variable": [
                 {
                   "key": "appName",
-                  "value": ""
+                  "value": "your-app-name"
                 }
               ]
             },
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/app/{appName}/logs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "app",
+                    "{appName}",
+                    "logs"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "appName",
+                      "value": "your-app-name"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "\"log line 1\\nlog line 2\\nlog line 3\\n\"",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
-          "name": "Delete app",
+          "name": "Delete App",
           "request": {
             "url": {
-              "raw": "{{baseUrl}}/app/{appName}/delete?forceDestroy=",
+              "raw": "{{baseUrl}}/app/{appName}/delete",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -95,23 +154,48 @@
                 "{appName}",
                 "delete"
               ],
-              "query": [
-                {
-                  "key": "forceDestroy",
-                  "value": ""
-                }
-              ],
+              "query": [],
               "variable": [
                 {
                   "key": "appName",
-                  "value": ""
+                  "value": "your-app-name"
                 }
               ]
             },
             "header": [],
             "method": "DELETE"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/app/{appName}/delete",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "app",
+                    "{appName}",
+                    "delete"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "appName",
+                      "value": "your-app-name"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "DELETE"
+              },
+              "body": "\"Deleted app\"",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         }
       ],
@@ -121,10 +205,10 @@
       "name": "Room",
       "item": [
         {
-          "name": "Create room",
+          "name": "Create Room",
           "request": {
             "url": {
-              "raw": "{{baseUrl}}/rooms/create/:appId?region=",
+              "raw": "{{baseUrl}}/rooms/create/:appId?region=us-east-1",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -136,24 +220,59 @@
               "query": [
                 {
                   "key": "region",
-                  "value": ""
+                  "value": "us-east-1"
                 }
               ],
               "variable": [
                 {
                   "key": "appId",
-                  "value": ""
+                  "value": "your-app-id"
                 }
               ]
             },
             "header": [],
             "method": "POST"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/rooms/create/:appId?region=us-east-1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rooms",
+                    "create",
+                    ":appId"
+                  ],
+                  "query": [
+                    {
+                      "key": "region",
+                      "value": "us-east-1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "appId",
+                      "value": "your-app-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "POST"
+              },
+              "body": "{\n    \"roomId\": \"your-room-id\",\n    \"host\": \"https://www.your-host.com\",\n    \"port\": 435\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
-          "name": "Connect room",
+          "name": "Connect Room",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/rooms/connect/:appId/:roomId",
@@ -170,22 +289,57 @@
               "variable": [
                 {
                   "key": "appId",
-                  "value": ""
+                  "value": "your-app-id"
                 },
                 {
                   "key": "roomId",
-                  "value": ""
+                  "value": "your-room-id"
                 }
               ]
             },
             "header": [],
             "method": "POST"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/rooms/connect/:appId/:roomId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rooms",
+                    "connect",
+                    ":appId",
+                    ":roomId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "appId",
+                      "value": "your-app-id"
+                    },
+                    {
+                      "key": "roomId",
+                      "value": "your-room-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "POST"
+              },
+              "body": "{\n    \"host\": \"https://www.your-host.com\",\n    \"port\": 435\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
-          "name": "Suspend room",
+          "name": "Suspend Room",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/rooms/suspense/:appId/:roomId",
@@ -202,22 +356,57 @@
               "variable": [
                 {
                   "key": "appId",
-                  "value": ""
+                  "value": "your-app-id"
                 },
                 {
                   "key": "roomId",
-                  "value": ""
+                  "value": "your-room-id"
                 }
               ]
             },
             "header": [],
             "method": "DELETE"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/rooms/suspense/:appId/:roomId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rooms",
+                    "suspense",
+                    ":appId",
+                    ":roomId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "appId",
+                      "value": "your-app-id"
+                    },
+                    {
+                      "key": "roomId",
+                      "value": "your-room-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "DELETE"
+              },
+              "body": "{\n    \"suspended\": true\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
-          "name": "Delete room",
+          "name": "Destroy Room",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/rooms/destory/:appId/:roomId",
@@ -234,18 +423,53 @@
               "variable": [
                 {
                   "key": "appId",
-                  "value": ""
+                  "value": "your-app-id"
                 },
                 {
                   "key": "roomId",
-                  "value": ""
+                  "value": "your-room-id"
                 }
               ]
             },
             "header": [],
             "method": "DELETE"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/rooms/destory/:appId/:roomId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rooms",
+                    "destory",
+                    ":appId",
+                    ":roomId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "appId",
+                      "value": "your-app-id"
+                    },
+                    {
+                      "key": "roomId",
+                      "value": "your-room-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "DELETE"
+              },
+              "body": "{\n    \"destroyed\": true\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         }
       ],
